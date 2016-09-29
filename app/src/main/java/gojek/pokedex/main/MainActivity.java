@@ -1,8 +1,10 @@
-package gojek.pokedex;
+package gojek.pokedex.main;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import gojek.pokedex.R;
 
 public class MainActivity extends AppCompatActivity {
 

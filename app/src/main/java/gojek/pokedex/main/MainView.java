@@ -1,4 +1,4 @@
-package gojek.pokedex;
+package gojek.pokedex.main;
 
 public interface MainView {
 }
