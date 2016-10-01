@@ -27,11 +27,9 @@ public class PokemonsActivity extends AppCompatActivity implements PokemonsView 
 
     @Override
     public void showPokemons(List<Pokemon> pokemons) {
-
     }
 
     @Override
     public void showError(String message) {
-
     }
 }
