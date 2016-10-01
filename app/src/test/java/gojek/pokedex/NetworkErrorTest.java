@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
+import java.text.ParseException;
 
 public class NetworkErrorTest {
     @Test
@@ -20,5 +21,12 @@ public class NetworkErrorTest {
         UnknownHostException noInternetConnectionPresent = new UnknownHostException();
         NetworkError networkError = new NetworkError(noInternetConnectionPresent);
         Assert.assertEquals("No Internet Connection! Please Try Again!", networkError.getMessage());
+    }
+
+    @Test
+    public void testThatItHandlesIssuesWhichAreNotExpected() {
+        ParseException parseException = new ParseException("", 1);
+        NetworkError networkError = new NetworkError(parseException);
+        Assert.assertEquals("Something went wrong! Please try again.", networkError.getMessage());
     }
 }
