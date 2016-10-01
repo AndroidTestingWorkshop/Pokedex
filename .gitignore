@@ -38,6 +38,4 @@ project.properties
 *.ipr
 *.iws
 
-##Gradle-based build
-.gradle
 build/
