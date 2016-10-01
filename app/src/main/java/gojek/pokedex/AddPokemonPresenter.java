@@ -12,6 +12,9 @@ public class AddPokemonPresenter {
     }
 
     public void addPokemonDetails(String pokemonName, List<PokemonType> pokemonTypes, String pokemonDescription) {
-        view.showPopupError("Name should not be empty");
-    }
+        if (pokemonName == null) {
+            view.showPopupError("Name should not be empty");
+            return;
+        }
+        view.showPopupError("Description should not be empty");    }
 }

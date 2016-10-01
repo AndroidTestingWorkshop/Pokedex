@@ -33,4 +33,13 @@ public class AddPokemonPresenterTest {
         presenter.addPokemonDetails(null, pokemonTypes, "some valid description");
         verify(view).showPopupError(errorMessage);
     }
+
+    @Test
+    public void testShouldShowDescriptionErrorIfDescriptionIsEmpty() throws Exception {
+        List<PokemonType> pokemonTypes = new ArrayList<>();
+        pokemonTypes.add(new PokemonType());
+        String errorMessage = "Description should not be empty";
+        presenter.addPokemonDetails("asd", pokemonTypes, null);
+        verify(view).showPopupError(errorMessage);
+    }
 }
