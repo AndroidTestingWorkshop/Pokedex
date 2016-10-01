@@ -21,7 +21,7 @@ public class PokemonsPresenter {
         pokemonService.loadPokemons(new PokemonLoadCallback() {
             @Override
             public void onLoadFailed(NetworkError expectedError) {
-
+                view.showError(expectedError.getMessage());
             }
 
             @Override

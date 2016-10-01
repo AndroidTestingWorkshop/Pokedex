@@ -10,6 +10,7 @@ import org.mockito.invocation.InvocationOnMock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.mockito.stubbing.Answer;
 
+import java.net.SocketTimeoutException;
 import java.util.List;
 
 import gojek.pokedex.main.PokemonsPresenter;
@@ -45,5 +46,20 @@ public class PokemonsPresenterTest {
         }).when(pokemonService).loadPokemons(Matchers.<PokemonLoadCallback>any());
         presenter.loadPokemons();
         verify(view).showPokemons(pokemons);
+    }
+
+    @Test
+    public void testShouldShowErrorMessageWhennotableToFetchPokemons() throws Exception {
+        final NetworkError expectedNetworkError = new NetworkError(new SocketTimeoutException());
+        Mockito.doAnswer(new Answer() {
+            @Override
+            public Object answer(InvocationOnMock invocation) throws Throwable {
+                ((PokemonLoadCallback) invocation.getArguments()[0]).onLoadFailed(expectedNetworkError);
+                return null;
+            }
+        }).when(pokemonService).loadPokemons(Matchers.<PokemonLoadCallback>any());
+        presenter.loadPokemons();
+        String message = "Server Timed Out, Please Try Again!";
+        verify(view).showError(message);
     }
 }

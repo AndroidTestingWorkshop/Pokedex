@@ -6,4 +6,6 @@ import gojek.pokedex.model.Pokemon;
 
 public interface PokemonsView {
     void showPokemons(List<Pokemon> pokemons);
+
+    void showError(String message);
 }
