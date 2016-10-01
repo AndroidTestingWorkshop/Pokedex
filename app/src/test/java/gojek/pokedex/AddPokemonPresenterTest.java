@@ -26,7 +26,7 @@ public class AddPokemonPresenterTest {
     }
 
     @Test
-    public void testShouldShowNameErrorIfNameIsEmpty() {
+    public void testShouldShowNameErrorIfNameIsNull() {
         List<PokemonType> pokemonTypes = new ArrayList<>();
         pokemonTypes.add(new PokemonType());
         String errorMessage = "Name should not be empty";
@@ -35,11 +35,29 @@ public class AddPokemonPresenterTest {
     }
 
     @Test
-    public void testShouldShowDescriptionErrorIfDescriptionIsEmpty() throws Exception {
+    public void testShouldShowDescriptionErrorIfDescriptionIsNull() throws Exception {
         List<PokemonType> pokemonTypes = new ArrayList<>();
         pokemonTypes.add(new PokemonType());
         String errorMessage = "Description should not be empty";
         presenter.addPokemonDetails("asd", pokemonTypes, null);
+        verify(view).showPopupError(errorMessage);
+    }
+
+    @Test
+    public void testShouldShowNameErrorIfNameIsEmptyString() {
+        List<PokemonType> pokemonTypes = new ArrayList<>();
+        pokemonTypes.add(new PokemonType());
+        String errorMessage = "Name should not be empty";
+        presenter.addPokemonDetails("", pokemonTypes, "some valid description");
+        verify(view).showPopupError(errorMessage);
+    }
+
+    @Test
+    public void testShouldShowDescriptionErrorIfDescriptionIsEmptyString() throws Exception {
+        List<PokemonType> pokemonTypes = new ArrayList<>();
+        pokemonTypes.add(new PokemonType());
+        String errorMessage = "Description should not be empty";
+        presenter.addPokemonDetails("asd", pokemonTypes, "");
         verify(view).showPopupError(errorMessage);
     }
 }
