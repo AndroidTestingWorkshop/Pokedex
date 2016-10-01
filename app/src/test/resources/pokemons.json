@@ -1,0 +1,560 @@
+[
+  {
+    "id": "1",
+    "name": "Bulbasaur",
+    "description": "While it is young, it uses the nutrients that are stored in the seeds on its back in order to grow.",
+    "image_url": "https://img.pokemondb.net/artwork/bulbasaur.jpg",
+    "type": "GRASS",
+    "evolve_to": "2",
+    "color_code": "#4CAF50"
+  },
+  {
+    "id": "2",
+    "name": "Ivysaur",
+    "description": "When the bud on its back starts swelling, a sweet aroma wafts to indicate the flower’s coming bloom.",
+    "image_url": "https://img.pokemondb.net/artwork/ivysaur.jpg",
+    "type": "GRASS",
+    "evolve_to": "3",
+    "color_code": "#4CAF50"
+  },
+  {
+    "id": "3",
+    "name": "Venusaur",
+    "description": "It is able to convert sunlight into energy. As a result, it is more powerful in the summertime.",
+    "image_url": "https://img.pokemondb.net/artwork/venusaur.jpg",
+    "type": "GRASS",
+    "evolve_to": "",
+    "color_code": "#4CAF50"
+  },
+  {
+    "id": "4",
+    "name": "Charmander",
+    "description": "If it's healthy, the flame on the tip of its tail will burn vigorously, even if it gets a bit wet.",
+    "image_url": "https://img.pokemondb.net/artwork/charmander.jpg",
+    "type": "FIRE",
+    "evolve_to": "5",
+    "color_code": "#F44336"
+  },
+  {
+    "id": "5",
+    "name": "Charmeleon",
+    "description": "If it becomes agitated during battle, it spouts intense flames, incinerating its surroundings.",
+    "image_url": "https://img.pokemondb.net/artwork/charmeleon.jpg",
+    "type": "FIRE",
+    "evolve_to": "6",
+    "color_code": "#F44336"
+  },
+  {
+    "id": "6",
+    "name": "Charizard",
+    "description": "It uses its wings to fly high. The temperature of its fire increases as it gains experience in battle.",
+    "image_url": "https://img.pokemondb.net/artwork/charizard.jpg",
+    "type": "FIRE",
+    "evolve_to": "",
+    "color_code": "#F44336"
+  },
+  {
+    "id": "7",
+    "name": "Squirtle",
+    "description": "Shoots water at prey while in the water. Withdraws into its shell when in danger.",
+    "image_url": "https://img.pokemondb.net/artwork/squirtle.jpg",
+    "type": "WATER",
+    "evolve_to": "8",
+    "color_code": "#2196F3"
+  },
+  {
+    "id": "8",
+    "name": "Wartortle",
+    "description": "It cleverly controls its furry ears and tail to maintain its balance while swimming.",
+    "image_url": "https://img.pokemondb.net/artwork/wartortle.jpg",
+    "type": "WATER",
+    "evolve_to": "9",
+    "color_code": "#2196F3"
+  },
+  {
+    "id": "9",
+    "name": "Blastoise",
+    "description": "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
+    "image_url": "https://img.pokemondb.net/artwork/blastoise.jpg",
+    "type": "WATER",
+    "evolve_to": "",
+    "color_code": "#2196F3"
+  },
+  {
+    "id": "10",
+    "name": "Caterpie",
+    "description": "If you touch the feeler on top of its head, it will release a horrible stink to protect itself.",
+    "image_url": "https://img.pokemondb.net/artwork/caterpie.jpg",
+    "type": "BUG",
+    "evolve_to": "11",
+    "color_code": "#CDDC39"
+  },
+  {
+    "id": "11",
+    "name": "Metapod",
+    "description": "Hardens its shell to protect itself. However, a large impact may cause it to pop out of its shell.",
+    "image_url": "https://img.pokemondb.net/artwork/metapod.jpg",
+    "type": "BUG",
+    "evolve_to": "12",
+    "color_code": "#CDDC39"
+  },
+  {
+    "id": "12",
+    "name": "Butterfree",
+    "description": "It loves the honey of flowers and can locate flower patches that have even tiny amounts of pollen.",
+    "image_url": "https://img.pokemondb.net/artwork/butterfree.jpg",
+    "type": "BUG",
+    "evolve_to": "",
+    "color_code": "#CDDC39"
+  },
+  {
+    "id": "13",
+    "name": "Weedle",
+    "description": "Often found in forests, eating leaves. It has a sharp venomous stinger on its head.",
+    "image_url": "https://img.pokemondb.net/artwork/weedle.jpg",
+    "type": "BUG",
+    "evolve_to": "14",
+    "color_code": "#CDDC39"
+  },
+  {
+    "id": "14",
+    "name": "Kakuna",
+    "description": "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.",
+    "image_url": "https://img.pokemondb.net/artwork/kakuna.jpg",
+    "type": "BUG",
+    "evolve_to": "15",
+    "color_code": "#CDDC39"
+  },
+  {
+    "id": "15",
+    "name": "Beedrill",
+    "description": "It can take down any opponent with its powerful poison stingers. It sometimes attacks in swarms.",
+    "image_url": "https://img.pokemondb.net/artwork/beedrill.jpg",
+    "type": "BUG",
+    "evolve_to": "",
+    "color_code": "#CDDC39"
+  },
+  {
+    "id": "16",
+    "name": "Pidgey",
+    "description": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.",
+    "image_url": "https://img.pokemondb.net/artwork/pidgey.jpg",
+    "type": "NORMAL",
+    "evolve_to": "17",
+    "color_code": "#FFC107"
+  },
+  {
+    "id": "17",
+    "name": "Pidgeotto",
+    "description": "It flies over its wide territory in search of prey, downing it with its highly developed claws.",
+    "image_url": "https://img.pokemondb.net/artwork/pidgeotto.jpg",
+    "type": "NORMAL",
+    "evolve_to": "18",
+    "color_code": "#FFC107"
+  },
+  {
+    "id": "18",
+    "name": "Pidgeot",
+    "description": "It spreads its beautiful wings wide to frighten its enemies. It can fly at Mach 2 speed.",
+    "image_url": "https://img.pokemondb.net/artwork/pidgeot.jpg",
+    "type": "NORMAL",
+    "evolve_to": "",
+    "color_code": "#FFC107"
+  },
+  {
+    "id": "19",
+    "name": "Rattata",
+    "description": "Cautious in the extreme, its hardy vitality lets it live in any kind of environment.",
+    "image_url": "https://img.pokemondb.net/artwork/rattata.jpg",
+    "type": "NORMAL",
+    "evolve_to": "20",
+    "color_code": "#FFC107"
+  },
+  {
+    "id": "20",
+    "name": "Raticate",
+    "description": "It whittles its constantly growing fangs by gnawing on hard things. It can chew apart cinder walls.",
+    "image_url": "https://img.pokemondb.net/artwork/Raticate.jpg",
+    "type": "NORMAL",
+    "evolve_to": "",
+    "color_code": "#FFC107"
+  },
+  {
+    "id": "21",
+    "name": "Spearow",
+    "description": "Inept at flying high. However, it can fly around very fast to protect its territory.",
+    "image_url": "https://img.pokemondb.net/artwork/spearow.jpg",
+    "type": "NORMAL",
+    "evolve_to": "22",
+    "color_code": "#FFC107"
+  },
+  {
+    "id": "22",
+    "name": "Fearow",
+    "description": "It has the stamina to fly all day on its broad wings. It fights by using its sharp beak.",
+    "image_url": "https://img.pokemondb.net/artwork/fearow.jpg",
+    "type": "NORMAL",
+    "evolve_to": "",
+    "color_code": "#FFC107"
+  },
+  {
+    "id": "23",
+    "name": "Ekans",
+    "description": "A very common sight in grassland, etc. It flicks its tongue in and out to sense danger in its surroundings.",
+    "image_url": "https://img.pokemondb.net/artwork/ekans.jpg",
+    "type": "POISON",
+    "evolve_to": "24",
+    "color_code": "#673AB7"
+  },
+  {
+    "id": "24",
+    "name": "Arbok",
+    "description": "The pattern on its belly appears to be a frightening face. Weak foes will flee just at the sight of the pattern.",
+    "image_url": "https://img.pokemondb.net/artwork/arbok.jpg",
+    "type": "POISON",
+    "evolve_to": "",
+    "color_code": "#673AB7"
+  },
+  {
+    "id": "25",
+    "name": "Pikachu",
+    "description": "It keeps its tail raised to monitor its surroundings. If you yank its tail, it will try to bite you.",
+    "image_url": "https://img.pokemondb.net/artwork/pikachu.jpg",
+    "type": "ELECTRIC",
+    "evolve_to": "26",
+    "color_code": "#FFEB3B"
+  },
+  {
+    "id": "26",
+    "name": "Raichu",
+    "description": "When its electricity builds, its muscles are stimulated, and it becomes more aggressive than usual.",
+    "image_url": "https://img.pokemondb.net/artwork/raichu.jpg",
+    "type": "ELECTRIC",
+    "evolve_to": "",
+    "color_code": "#FFEB3B"
+  },
+  {
+    "id": "27",
+    "name": "Sandshrew",
+    "description": "It burrows and lives underground. If threatened, it curls itself up into a ball for protection.",
+    "image_url": "https://img.pokemondb.net/artwork/sandshrew.jpg",
+    "type": "GROUND",
+    "evolve_to": "28",
+    "color_code": "#795548"
+  },
+  {
+    "id": "28",
+    "name": "Sandslash",
+    "description": "Adept at climbing trees, it rolls into a spiny ball, then attacks its enemies from above.",
+    "image_url": "https://img.pokemondb.net/artwork/sandslash.jpg",
+    "type": "GROUND",
+    "evolve_to": "",
+    "color_code": "#795548"
+  },
+  {
+    "id": "29",
+    "name": "Nidoran (F)",
+    "description": "The poison hidden in its small horn is extremely potent. Even a tiny scratch can have fatal results.",
+    "image_url": "https://img.pokemondb.net/artwork/nidoran-f.jpg",
+    "type": "POISON",
+    "evolve_to": "30",
+    "color_code": "#673AB7"
+  },
+  {
+    "id": "30",
+    "name": "Nidorina",
+    "description": "When feeding its young, it first chews the food into a paste, then spits it out for the offspring.",
+    "image_url": "https://img.pokemondb.net/artwork/nidorina.jpg",
+    "type": "POISON",
+    "evolve_to": "31",
+    "color_code": "#673AB7"
+  },
+  {
+    "id": "31",
+    "name": "Nidoqueen",
+    "description": "It uses its scaly, rugged body to seal the entrance of its nest and protect its young from predators.",
+    "image_url": "https://img.pokemondb.net/artwork/nidoqueen.jpg",
+    "type": "POISON",
+    "evolve_to": "",
+    "color_code": "#673AB7"
+  },
+  {
+    "id": "32",
+    "name": "Nidoran (M)",
+    "description": "It is small, but its horn is filled with poison. It charges then stabs with the horn to inject poison.",
+    "image_url": "https://img.pokemondb.net/artwork/nidoran-m.jpg",
+    "type": "POISON",
+    "evolve_to": "33",
+    "color_code": "#673AB7"
+  },
+  {
+    "id": "33",
+    "name": "Nidorino",
+    "description": "Its horns contain venom. If they are stabbed into an enemy, the impact makes the poison leak out.",
+    "image_url": "https://img.pokemondb.net/artwork/nidorino.jpg",
+    "type": "POISON",
+    "evolve_to": "34",
+    "color_code": "#673AB7"
+  },
+  {
+    "id": "34",
+    "name": "Nidoking",
+    "description": "One swing of its mighty tail can snap a telephone pole as if it were a matchstick.",
+    "image_url": "https://img.pokemondb.net/artwork/nidoking.jpg",
+    "type": "POISON",
+    "evolve_to": "",
+    "color_code": "#673AB7"
+  },
+  {
+    "id": "35",
+    "name": "Clefairy",
+    "description": "The moonlight that it stores in the wings on its back apparently gives it the ability to float in midair.",
+    "image_url": "https://img.pokemondb.net/artwork/clefairy.jpg",
+    "type": "FAIRY",
+    "evolve_to": "36",
+    "color_code": "#F06292"
+  },
+  {
+    "id": "36",
+    "name": "Clefable",
+    "description": "Its very sensitive ears lets it distinguish distant sounds. As a result, it prefers quiet places.",
+    "image_url": "https://img.pokemondb.net/artwork/clefable.jpg",
+    "type": "FAIRY",
+    "evolve_to": "",
+    "color_code": "#F06292"
+  },
+  {
+    "id": "37",
+    "name": "Vulpix",
+    "description": "While young, it has six gorgeous tails. When it grows, several new tails are sprouted.",
+    "image_url": "https://img.pokemondb.net/artwork/vulpix.jpg",
+    "type": "FIRE",
+    "evolve_to": "38",
+    "color_code": "#F44336"
+  },
+  {
+    "id": "38",
+    "name": "Ninetales",
+    "description": "Its nine tails are said to be imbued with a mystic power. It can live for a thousand years.",
+    "image_url": "https://img.pokemondb.net/artwork/ninetales.jpg",
+    "type": "FIRE",
+    "evolve_to": "",
+    "color_code": "#F44336"
+  },
+  {
+    "id": "39",
+    "name": "Jigglypuff",
+    "description": "Looking into its cute, round eyes causes it to sing a relaxing melody, inducing its enemies to sleep.",
+    "image_url": "https://img.pokemondb.net/artwork/jigglypuff.jpg",
+    "type": "FAIRY",
+    "evolve_to": "40",
+    "color_code": "#F06292"
+  },
+  {
+    "id": "40",
+    "name": "Wigglytuff",
+    "description": "Its fur is extremely fine, dense, and supple. The exquisitely pleasant fur conveys an image of luxury.",
+    "image_url": "https://img.pokemondb.net/artwork/wigglytuff.jpg",
+    "type": "FAIRY",
+    "evolve_to": "",
+    "color_code": "#F06292"
+  },
+  {
+    "id": "41",
+    "name": "Zubat",
+    "description": "Capable of flying safely in dark places, it emits ultrasonic cries to check for any obstacles.",
+    "image_url": "https://img.pokemondb.net/artwork/zubat.jpg",
+    "type": "POISON",
+    "evolve_to": "42",
+    "color_code": "#673AB7"
+  },
+  {
+    "id": "42",
+    "name": "Golbat",
+    "description": "Once it starts sucking blood, it does not stop until it is full. It flies at night in search of prey.",
+    "image_url": "https://img.pokemondb.net/artwork/golbat.jpg",
+    "type": "POISON",
+    "evolve_to": "",
+    "color_code": "#673AB7"
+  },
+  {
+    "id": "43",
+    "name": "Oddish",
+    "description": "Awakened by moonlight, it roams actively at night. In the day, it stays quietly underground.",
+    "image_url": "https://img.pokemondb.net/artwork/oddish.jpg",
+    "type": "GRASS",
+    "evolve_to": "44",
+    "color_code": "#4CAF50"
+  },
+  {
+    "id": "44",
+    "name": "Gloom",
+    "description": "The honey it drools from its mouth smells so atrocious, it can curl noses more than a mile away.",
+    "image_url": "https://img.pokemondb.net/artwork/gloom.jpg",
+    "type": "GRASS",
+    "evolve_to": "45",
+    "color_code": "#4CAF50"
+  },
+  {
+    "id": "45",
+    "name": "Vileplume",
+    "description": "Its petals are the largest in the world. As it walks, it scatters extremely allergenic pollen.",
+    "image_url": "https://img.pokemondb.net/artwork/vileplume.jpg",
+    "type": "GRASS",
+    "evolve_to": "",
+    "color_code": "#4CAF50"
+  },
+  {
+    "id": "46",
+    "name": "Paras",
+    "description": "As its body grows, large mushrooms named tochukaso start sprouting out of its back.",
+    "image_url": "https://img.pokemondb.net/artwork/paras.jpg",
+    "type": "GRASS",
+    "evolve_to": "47",
+    "color_code": "#4CAF50"
+  },
+  {
+    "id": "47",
+    "name": "Parasect",
+    "description": "A mushroom grown larger than the host’s body controls Parasect. It scatters poisonous spores.",
+    "image_url": "https://img.pokemondb.net/artwork/parasect.jpg",
+    "type": "GRASS",
+    "evolve_to": "",
+    "color_code": "#4CAF50"
+  },
+  {
+    "id": "48",
+    "name": "Venonat",
+    "description": "Lives in the shadows of tall trees where it eats bugs. It is attracted by light at night.",
+    "image_url": "https://img.pokemondb.net/artwork/venonat.jpg",
+    "type": "BUG",
+    "evolve_to": "49",
+    "color_code": "#CDDC39"
+  },
+  {
+    "id": "49",
+    "name": "Venomoth",
+    "description": "It flutters its wings to scatter dustlike scales. The scales leach toxins if they contact skin.",
+    "image_url": "https://img.pokemondb.net/artwork/venomoth.jpg",
+    "type": "BUG",
+    "evolve_to": "",
+    "color_code": "#CDDC39"
+  },
+  {
+    "id": "50",
+    "name": "Diglett",
+    "description": "Its skin is very thin. If it is exposed to light, its blood heats up, causing it to grow weak.",
+    "image_url": "https://img.pokemondb.net/artwork/diglett.jpg",
+    "type": "GROUND",
+    "evolve_to": "51",
+    "color_code": "#795548"
+  },
+  {
+    "id": "51",
+    "name": "Dugtrio",
+    "description": "Its three heads move alternately, driving it through tough soil to depths of over 60 miles.",
+    "image_url": "https://img.pokemondb.net/artwork/dugtrio.jpg",
+    "type": "GROUND",
+    "evolve_to": "",
+    "color_code": "#795548"
+  },
+  {
+    "id": "52",
+    "name": "Meowth",
+    "description": "Adores circular objects. Wanders the streets on a nightly basis to look for dropped loose change.",
+    "image_url": "https://img.pokemondb.net/artwork/meowth.jpg",
+    "type": "NORMAL",
+    "evolve_to": "53",
+    "color_code": "#FFC107"
+  },
+  {
+    "id": "53",
+    "name": "Persian",
+    "description": "The gem in its forehead glows on its own! It walks with all the grace and elegance of a proud queen.",
+    "image_url": "https://img.pokemondb.net/artwork/persian.jpg",
+    "type": "NORMAL",
+    "evolve_to": "",
+    "color_code": "#FFC107"
+  },
+  {
+    "id": "54",
+    "name": "Psyduck",
+    "description": "If its usual headache worsens, it starts exhibiting odd powers. It can’t remember doing so, however.",
+    "image_url": "https://img.pokemondb.net/artwork/psyduck.jpg",
+    "type": "WATER",
+    "evolve_to": "55",
+    "color_code": "#2196F3"
+  },
+  {
+    "id": "55",
+    "name": "Golduck",
+    "description": "When it swims at full speed using its long, webbed limbs, its forehead somehow begins to glow.",
+    "image_url": "https://img.pokemondb.net/artwork/golduck.jpg",
+    "type": "WATER",
+    "evolve_to": "",
+    "color_code": "#2196F3"
+  },
+  {
+    "id": "56",
+    "name": "Mankey",
+    "description": "Extremely quick to anger. It could be docile one moment, then thrashing away the next instant.",
+    "image_url": "https://img.pokemondb.net/artwork/mankey.jpg",
+    "type": "FIGHTING",
+    "evolve_to": "57",
+    "color_code": "#3E2723"
+  },
+  {
+    "id": "57",
+    "name": "Primeape",
+    "description": "It becomes wildly furious if it even senses someone looking at it. It chases anyone that meets its glare.",
+    "image_url": "https://img.pokemondb.net/artwork/primeape.jpg",
+    "type": "FIGHTING",
+    "evolve_to": "",
+    "color_code": "#3E2723"
+  },
+  {
+    "id": "58",
+    "name": "Growlithe",
+    "description": "It has a brave and trustworthy nature. It fearlessly stands up to bigger and stronger foes.",
+    "image_url": "https://img.pokemondb.net/artwork/growlithe.jpg",
+    "type": "FIRE",
+    "evolve_to": "59",
+    "color_code": "#F44336"
+  },
+  {
+    "id": "59",
+    "name": "Arcanine",
+    "description": "Its proud and regal appearance has captured the hearts of people since long ago.",
+    "image_url": "https://img.pokemondb.net/artwork/arcanine.jpg",
+    "type": "FIRE",
+    "evolve_to": "",
+    "color_code": "#F44336"
+  },
+  {
+    "id": "60",
+    "name": "Poliwag",
+    "description": "Its skin is so thin, its internal organs are visible. It has trouble walking on its newly grown feet.",
+    "image_url": "https://img.pokemondb.net/artwork/poliwag.jpg",
+    "type": "WATER",
+    "evolve_to": "61",
+    "color_code": "#2196F3"
+  },
+  {
+    "id": "61",
+    "name": "Poliwhirl",
+    "description": "The spiral pattern on its belly subtly undulates. Staring at it gradually causes drowsiness.",
+    "image_url": "https://img.pokemondb.net/artwork/poliwhirl.jpg",
+    "type": "WATER",
+    "evolve_to": "62",
+    "color_code": "#2196F3"
+  },
+  {
+    "id": "62",
+    "name": "Poliwrath",
+    "description": "With its extremely tough muscles, it can keep swimming in the Pacific Ocean without resting.",
+    "image_url": "https://img.pokemondb.net/artwork/poliwrath.jpg",
+    "type": "WATER",
+    "evolve_to": "",
+    "color_code": "#2196F3"
+  }
+]
