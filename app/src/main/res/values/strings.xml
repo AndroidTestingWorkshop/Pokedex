@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Pokedex</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="base_url">http://http://demo4019900.mockable.io/</string>
 </resources>
