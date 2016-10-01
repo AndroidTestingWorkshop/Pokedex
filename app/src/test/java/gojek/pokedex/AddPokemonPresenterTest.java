@@ -67,4 +67,12 @@ public class AddPokemonPresenterTest {
         presenter.addPokemonDetails("asd", null, "aaaa");
         verify(view).showPopupError(errorMessage);
     }
+
+    @Test
+    public void testShouldShowEmptyTypesErrorWhenPokemonTypesIsEmpty() throws Exception {
+        List<PokemonType> pokemonTypes = new ArrayList<>();
+        String errorMessage = "Should pick at least 1 type";
+        presenter.addPokemonDetails("asd", pokemonTypes, "aaaa");
+        verify(view).showPopupError(errorMessage);
+    }
 }
