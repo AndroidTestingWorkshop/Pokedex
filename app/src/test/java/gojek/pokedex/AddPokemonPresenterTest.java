@@ -75,4 +75,15 @@ public class AddPokemonPresenterTest {
         presenter.addPokemonDetails("asd", pokemonTypes, "aaaa");
         verify(view).showPopupError(errorMessage);
     }
+
+    @Test
+    public void testShouldShowMaximumTypesExceededWhenPokemonTypesCountIsMoreThanTwo() throws Exception {
+        List<PokemonType> pokemonTypes = new ArrayList<>();
+        pokemonTypes.add(new PokemonType());
+        pokemonTypes.add(new PokemonType());
+        pokemonTypes.add(new PokemonType());
+        String errorMessage = "Should pick maximum 2 types";
+        presenter.addPokemonDetails("asd", pokemonTypes, "aaaa");
+        verify(view).showPopupError(errorMessage);
+    }
 }
