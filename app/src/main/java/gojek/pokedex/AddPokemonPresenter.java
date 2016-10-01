@@ -16,5 +16,10 @@ public class AddPokemonPresenter {
             view.showPopupError("Name should not be empty");
             return;
         }
-        view.showPopupError("Description should not be empty");    }
+        if (pokemonDescription == null || pokemonDescription.length() < 1) {
+            view.showPopupError("Description should not be empty");
+            return;
+        }
+        view.showPopupError("Should pick at least 1 type");
+    }
 }
