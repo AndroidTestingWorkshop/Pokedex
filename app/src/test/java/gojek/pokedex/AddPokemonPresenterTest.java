@@ -86,4 +86,13 @@ public class AddPokemonPresenterTest {
         presenter.addPokemonDetails("asd", pokemonTypes, "aaaa");
         verify(view).showPopupError(errorMessage);
     }
+
+    @Test
+    public void testShouldShowSuccessfulNotificationWhenFieldsAreValid() throws Exception {
+        List<PokemonType> pokemonTypes = new ArrayList<>();
+        pokemonTypes.add(new PokemonType());
+        pokemonTypes.add(new PokemonType());
+        presenter.addPokemonDetails("asd", pokemonTypes, "aaaa");
+        verify(view).showSuccessNotification();
+    }
 }

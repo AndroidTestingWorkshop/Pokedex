@@ -24,6 +24,10 @@ public class AddPokemonPresenter {
             view.showPopupError("Should pick at least 1 type");
             return;
         }
-        view.showPopupError("Should pick maximum 2 types");
+        if (pokemonTypes.size() > 2) {
+            view.showPopupError("Should pick maximum 2 types");
+            return;
+        }
+        view.showSuccessNotification();
     }
 }
