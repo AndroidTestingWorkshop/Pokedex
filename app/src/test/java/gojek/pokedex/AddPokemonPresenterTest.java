@@ -9,6 +9,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 import java.util.ArrayList;
 import java.util.List;
 
+import gojek.pokedex.add.AddPokemonPresenter;
+import gojek.pokedex.add.AddPokemonView;
 import gojek.pokedex.model.PokemonType;
 
 import static org.mockito.Mockito.verify;

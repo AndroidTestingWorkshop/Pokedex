@@ -1,4 +1,4 @@
-package gojek.pokedex;
+package gojek.pokedex.add;
 
 import java.util.List;
 
