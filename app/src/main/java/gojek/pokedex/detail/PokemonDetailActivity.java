@@ -19,15 +19,7 @@ public class PokemonDetailActivity extends AppCompatActivity implements PokemonD
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pokemon_detail);
-        pokemonDetailPresenter = new PokemonDetailPresenter(this);
-        viewPagerPokemons = (ViewPager) findViewById(R.id.view_pager_pokemons);
-
-        ArrayList<Pokemon> pokemons = getIntent().getParcelableArrayListExtra(Pokemon.TAG_LIST);
-        selectedPokemonId = getIntent().getIntExtra(Pokemon.SELECTED_ID, 0);
-
-        PokemonsPagerAdapter pokemonsPagerAdapter = new PokemonsPagerAdapter(getSupportFragmentManager(), pokemons);
-        viewPagerPokemons.setAdapter(pokemonsPagerAdapter);
-        goToPokemonWithPosition(selectedPokemonId);
+        initialize();
     }
 
     @Override
@@ -43,5 +35,15 @@ public class PokemonDetailActivity extends AppCompatActivity implements PokemonD
     @Override
     public void goBackToPokemonList() {
         super.onBackPressed();
+    }
+
+    private void initialize() {
+        ArrayList<Pokemon> pokemons = getIntent().getParcelableArrayListExtra(Pokemon.TAG_LIST);
+        selectedPokemonId = getIntent().getIntExtra(Pokemon.SELECTED_ID, 0);
+        viewPagerPokemons = (ViewPager) findViewById(R.id.view_pager_pokemons);
+        pokemonDetailPresenter = new PokemonDetailPresenter(this);
+        PokemonsPagerAdapter pokemonsPagerAdapter = new PokemonsPagerAdapter(getSupportFragmentManager(), pokemons);
+        viewPagerPokemons.setAdapter(pokemonsPagerAdapter);
+        goToPokemonWithPosition(selectedPokemonId);
     }
 }
