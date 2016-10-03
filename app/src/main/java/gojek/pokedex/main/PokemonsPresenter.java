@@ -2,9 +2,7 @@ package gojek.pokedex.main;
 
 import java.util.List;
 
-import gojek.pokedex.NetworkError;
-import gojek.pokedex.PokemonLoadCallback;
-import gojek.pokedex.PokemonService;
+import gojek.pokedex.common.NetworkError;
 import gojek.pokedex.model.Pokemon;
 
 public class PokemonsPresenter {

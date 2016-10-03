@@ -8,6 +8,10 @@ import org.mockito.Mockito;
 import java.net.SocketTimeoutException;
 import java.util.List;
 
+import gojek.pokedex.common.NetworkError;
+import gojek.pokedex.main.PokemonLoadCallback;
+import gojek.pokedex.main.PokemonService;
+import gojek.pokedex.main.PokemonsNetworkService;
 import gojek.pokedex.model.Pokemon;
 import rx.Observable;
 

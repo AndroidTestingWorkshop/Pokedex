@@ -8,6 +8,8 @@ import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 import java.text.ParseException;
 
+import gojek.pokedex.common.NetworkError;
+
 public class NetworkErrorTest {
     @Test
     public void testThatItHandlesServerTimeoutExceptionWhenNotAbleToContactTheServer() {

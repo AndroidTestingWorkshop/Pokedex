@@ -1,4 +1,4 @@
-package gojek.pokedex;
+package gojek.pokedex.common;
 
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;

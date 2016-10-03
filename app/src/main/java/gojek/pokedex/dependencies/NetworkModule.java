@@ -6,8 +6,8 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import gojek.pokedex.PokemonService;
-import gojek.pokedex.PokemonsNetworkService;
+import gojek.pokedex.main.PokemonService;
+import gojek.pokedex.main.PokemonsNetworkService;
 import gojek.pokedex.R;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;

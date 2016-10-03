@@ -1,4 +1,4 @@
-package gojek.pokedex;
+package gojek.pokedex.main;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,14 +9,17 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import gojek.pokedex.R;
 import gojek.pokedex.model.Pokemon;
 
 public class PokemonsAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
     private final ArrayList<Pokemon> pokemonsList;
     private Context context;
+    private OnPokemonClickListener onPokemonClickListener;
 
-    public PokemonsAdapter(Context context) {
+    public PokemonsAdapter(Context context, OnPokemonClickListener onPokemonClickListener) {
         this.context = context;
+        this.onPokemonClickListener = onPokemonClickListener;
         this.pokemonsList = new ArrayList<>();
     }
 
@@ -29,6 +32,7 @@ public class PokemonsAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
     @Override
     public void onBindViewHolder(PokemonViewHolder holder, int position) {
         Pokemon pokemon = pokemonsList.get(position);
+        holder.setOnClickListener(position, onPokemonClickListener);
         holder.bind(pokemon.name, pokemon.type);
     }
 
@@ -41,5 +45,9 @@ public class PokemonsAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
         this.pokemonsList.clear();
         this.pokemonsList.addAll(pokemons);
         notifyDataSetChanged();
+    }
+
+    public ArrayList<Pokemon> getPokemons() {
+        return this.pokemonsList;
     }
 }

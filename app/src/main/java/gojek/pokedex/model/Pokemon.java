@@ -1,9 +1,14 @@
 package gojek.pokedex.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
-public class Pokemon {
-
+public class Pokemon implements Parcelable {
+    public static final String TAG_LIST = "gojek.pokedex.model.PokemonList";
+    public static final String SELECTED_ID = "gojek.pokedex.model.Pokemon.SELECTED_ID";
+    public static final String TAG = "gojek.pokedex.model.Pokemon.TAG";
     @SerializedName("id")
     public String id;
     @SerializedName("name")
@@ -49,4 +54,38 @@ public class Pokemon {
         result = 31 * result + (type != null ? type.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.id);
+        dest.writeString(this.name);
+        dest.writeString(this.description);
+        dest.writeString(this.imageUrl);
+        dest.writeString(this.type);
+    }
+
+    protected Pokemon(Parcel in) {
+        this.id = in.readString();
+        this.name = in.readString();
+        this.description = in.readString();
+        this.imageUrl = in.readString();
+        this.type = in.readString();
+    }
+
+    public static final Parcelable.Creator<Pokemon> CREATOR = new Parcelable.Creator<Pokemon>() {
+        @Override
+        public Pokemon createFromParcel(Parcel source) {
+            return new Pokemon(source);
+        }
+
+        @Override
+        public Pokemon[] newArray(int size) {
+            return new Pokemon[size];
+        }
+    };
 }

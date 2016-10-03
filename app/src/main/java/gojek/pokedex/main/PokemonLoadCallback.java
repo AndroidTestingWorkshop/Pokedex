@@ -1,7 +1,8 @@
-package gojek.pokedex;
+package gojek.pokedex.main;
 
 import java.util.List;
 
+import gojek.pokedex.common.NetworkError;
 import gojek.pokedex.model.Pokemon;
 
 public interface PokemonLoadCallback {

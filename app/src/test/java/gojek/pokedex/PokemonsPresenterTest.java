@@ -13,6 +13,9 @@ import org.mockito.stubbing.Answer;
 import java.net.SocketTimeoutException;
 import java.util.List;
 
+import gojek.pokedex.common.NetworkError;
+import gojek.pokedex.main.PokemonLoadCallback;
+import gojek.pokedex.main.PokemonService;
 import gojek.pokedex.main.PokemonsPresenter;
 import gojek.pokedex.main.PokemonsView;
 import gojek.pokedex.model.Pokemon;
