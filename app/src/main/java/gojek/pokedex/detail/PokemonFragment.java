@@ -5,7 +5,10 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import gojek.pokedex.R;
 import gojek.pokedex.model.Pokemon;
@@ -22,6 +25,12 @@ public class PokemonFragment extends android.support.v4.app.Fragment {
         super.onViewCreated(view, savedInstanceState);
         Pokemon pokemon = getArguments().getParcelable(Pokemon.TAG);
         TextView textPokemonName = (TextView) view.findViewById(R.id.text_pokemon_name);
+        TextView textPokemonDescription = (TextView) view.findViewById(R.id.text_pokemon_description);
+        ImageView imagePokemon = (ImageView) view.findViewById(R.id.image_pokemon);
         textPokemonName.setText(pokemon.name);
+        textPokemonDescription.setText(pokemon.description);
+        Glide.with(this)
+                .load(pokemon.imageUrl)
+                .into(imagePokemon);
     }
 }
