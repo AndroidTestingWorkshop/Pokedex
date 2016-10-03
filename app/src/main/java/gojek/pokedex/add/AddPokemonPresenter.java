@@ -1,14 +1,17 @@
 package gojek.pokedex.add;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import gojek.pokedex.model.PokemonType;
 
 public class AddPokemonPresenter {
     private AddPokemonView view;
+    private List<PokemonType> selectedPokemonTypes;
 
     public AddPokemonPresenter(AddPokemonView view) {
         this.view = view;
+        selectedPokemonTypes = new ArrayList<>();
     }
 
     public void addPokemonDetails(String pokemonName, List<PokemonType> pokemonTypes, String pokemonDescription) {
@@ -29,5 +32,12 @@ public class AddPokemonPresenter {
             return;
         }
         view.showSuccessNotification();
+    }
+
+    public void onPokemonTypeClick(PokemonType pokemonType) {
+        if (selectedPokemonTypes.contains(pokemonType))
+            selectedPokemonTypes.remove(pokemonType);
+        else
+            selectedPokemonTypes.add(pokemonType);
     }
 }

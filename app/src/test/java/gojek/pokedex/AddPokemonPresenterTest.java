@@ -30,7 +30,7 @@ public class AddPokemonPresenterTest {
     @Test
     public void testShouldShowNameErrorIfNameIsNull() {
         List<PokemonType> pokemonTypes = new ArrayList<>();
-        pokemonTypes.add(new PokemonType());
+        pokemonTypes.add(PokemonType.ELECTRICITY);
         String errorMessage = "Name should not be empty";
         presenter.addPokemonDetails(null, pokemonTypes, "some valid description");
         verify(view).showPopupError(errorMessage);
@@ -39,7 +39,7 @@ public class AddPokemonPresenterTest {
     @Test
     public void testShouldShowDescriptionErrorIfDescriptionIsNull() throws Exception {
         List<PokemonType> pokemonTypes = new ArrayList<>();
-        pokemonTypes.add(new PokemonType());
+        pokemonTypes.add(PokemonType.GRASS);
         String errorMessage = "Description should not be empty";
         presenter.addPokemonDetails("asd", pokemonTypes, null);
         verify(view).showPopupError(errorMessage);
@@ -48,7 +48,7 @@ public class AddPokemonPresenterTest {
     @Test
     public void testShouldShowNameErrorIfNameIsEmptyString() {
         List<PokemonType> pokemonTypes = new ArrayList<>();
-        pokemonTypes.add(new PokemonType());
+        pokemonTypes.add(PokemonType.GRASS);
         String errorMessage = "Name should not be empty";
         presenter.addPokemonDetails("", pokemonTypes, "some valid description");
         verify(view).showPopupError(errorMessage);
@@ -57,7 +57,7 @@ public class AddPokemonPresenterTest {
     @Test
     public void testShouldShowDescriptionErrorIfDescriptionIsEmptyString() throws Exception {
         List<PokemonType> pokemonTypes = new ArrayList<>();
-        pokemonTypes.add(new PokemonType());
+        pokemonTypes.add(PokemonType.GRASS);
         String errorMessage = "Description should not be empty";
         presenter.addPokemonDetails("asd", pokemonTypes, "");
         verify(view).showPopupError(errorMessage);
@@ -81,9 +81,9 @@ public class AddPokemonPresenterTest {
     @Test
     public void testShouldShowMaximumTypesExceededWhenPokemonTypesCountIsMoreThanTwo() throws Exception {
         List<PokemonType> pokemonTypes = new ArrayList<>();
-        pokemonTypes.add(new PokemonType());
-        pokemonTypes.add(new PokemonType());
-        pokemonTypes.add(new PokemonType());
+        pokemonTypes.add(PokemonType.GRASS);
+        pokemonTypes.add(PokemonType.GRASS);
+        pokemonTypes.add(PokemonType.GRASS);
         String errorMessage = "Should pick maximum 2 types";
         presenter.addPokemonDetails("asd", pokemonTypes, "aaaa");
         verify(view).showPopupError(errorMessage);
@@ -92,8 +92,8 @@ public class AddPokemonPresenterTest {
     @Test
     public void testShouldShowSuccessfulNotificationWhenFieldsAreValid() throws Exception {
         List<PokemonType> pokemonTypes = new ArrayList<>();
-        pokemonTypes.add(new PokemonType());
-        pokemonTypes.add(new PokemonType());
+        pokemonTypes.add(PokemonType.GRASS);
+        pokemonTypes.add(PokemonType.GRASS);
         presenter.addPokemonDetails("asd", pokemonTypes, "aaaa");
         verify(view).showSuccessNotification();
     }
