@@ -10,14 +10,16 @@ import java.util.ArrayList;
 import gojek.pokedex.R;
 import gojek.pokedex.model.Pokemon;
 
-public class PokemonDetailActivity extends AppCompatActivity {
+public class PokemonDetailActivity extends AppCompatActivity implements PokemonDetailView {
     private ViewPager viewPagerPokemons;
     private int selectedPokemonId;
+    private PokemonDetailPresenter pokemonDetailPresenter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pokemon_detail);
+        pokemonDetailPresenter = new PokemonDetailPresenter(this);
         viewPagerPokemons = (ViewPager) findViewById(R.id.view_pager_pokemons);
 
         ArrayList<Pokemon> pokemons = getIntent().getParcelableArrayListExtra(Pokemon.TAG_LIST);
@@ -25,16 +27,21 @@ public class PokemonDetailActivity extends AppCompatActivity {
 
         PokemonsPagerAdapter pokemonsPagerAdapter = new PokemonsPagerAdapter(getSupportFragmentManager(), pokemons);
         viewPagerPokemons.setAdapter(pokemonsPagerAdapter);
-        viewPagerPokemons.setCurrentItem(selectedPokemonId);
+        goToPokemonWithPosition(selectedPokemonId);
     }
 
     @Override
     public void onBackPressed() {
-        int currentItem = viewPagerPokemons.getCurrentItem();
-        if (currentItem <= selectedPokemonId) {
-            super.onBackPressed();
-        } else {
-            viewPagerPokemons.setCurrentItem(currentItem - 1);
-        }
+        pokemonDetailPresenter.onBackPressed(viewPagerPokemons.getCurrentItem(), selectedPokemonId);
+    }
+
+    @Override
+    public void goToPokemonWithPosition(int item) {
+        viewPagerPokemons.setCurrentItem(item);
+    }
+
+    @Override
+    public void goBackToPokemonList() {
+        super.onBackPressed();
     }
 }
