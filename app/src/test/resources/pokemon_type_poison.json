@@ -1,0 +1,9 @@
+{
+  "id": "23",
+  "name": "Ekans",
+  "description": "A very common sight in grassland, etc. It flicks its tongue in and out to sense danger in its surroundings.",
+  "image_url": "https://img.pokemondb.net/artwork/ekans.jpg",
+  "type": "POISON",
+  "evolve_to": "24",
+  "color_code": "#673AB7"
+}

@@ -19,12 +19,13 @@ public class Fixture {
         this.fileToLoad = pathOfFileToLoad;
     }
 
-    public String load() throws IOException {
+    public <T> T load(Class<T> tClass) throws IOException {
         File file = new File(BASE_PATH, fileToLoad);
         FileReader fileReader = new FileReader(file);
         char[] characterBuffer = new char[(int) file.length()];
         fileReader.read(characterBuffer);
-        return String.valueOf(characterBuffer);
+        String fixtureString = String.valueOf(characterBuffer);
+        return new Gson().fromJson(fixtureString, tClass);
     }
 
     public <T> List<T> loadList(Class<T[]> tClass) {

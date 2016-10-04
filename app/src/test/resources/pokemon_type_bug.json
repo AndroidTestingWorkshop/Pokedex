@@ -1,0 +1,9 @@
+{
+  "id": "10",
+  "name": "Caterpie",
+  "description": "If you touch the feeler on top of its head, it will release a horrible stink to protect itself.",
+  "image_url": "https://img.pokemondb.net/artwork/caterpie.jpg",
+  "type": "BUG",
+  "evolve_to": "11",
+  "color_code": "#CDDC39"
+}

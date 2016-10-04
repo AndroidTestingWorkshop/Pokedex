@@ -13,6 +13,7 @@ import gojek.pokedex.main.PokemonLoadCallback;
 import gojek.pokedex.main.PokemonService;
 import gojek.pokedex.main.PokemonsNetworkService;
 import gojek.pokedex.model.Pokemon;
+import gojek.pokedex.model.PokemonResponse;
 import rx.Observable;
 
 public class PokemonServiceTest {
@@ -34,11 +35,12 @@ public class PokemonServiceTest {
 
     @Test
     public void testThatPokemonServiceKnowsHowToReceiveListOfPokemons() {
-        List<Pokemon> pokemons = new Fixture("pokemons.json").loadList(Pokemon[].class);
-        Mockito.when(pokemonsNetworkService.loadPokemons()).thenReturn(Observable.just(pokemons));
+        List<PokemonResponse> pokemonResponses = new Fixture("pokemons.json").loadList(PokemonResponse[].class);
+        Mockito.when(pokemonsNetworkService.loadPokemons()).thenReturn(Observable.just(pokemonResponses));
         PokemonService pokemonService = new PokemonService(pokemonsNetworkService);
         PokemonLoadCallback pokemonLoadCallback = Mockito.mock(PokemonLoadCallback.class);
         pokemonService.loadPokemons(pokemonLoadCallback);
+        List<Pokemon> pokemons = new Fixture("pokemons.json").loadList(Pokemon[].class);
         Mockito.verify(pokemonLoadCallback).onLoadSuccess(pokemons);
     }
 }

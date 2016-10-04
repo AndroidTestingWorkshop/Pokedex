@@ -26,7 +26,7 @@ public class PokemonsAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
     @Override
     public PokemonViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_main, parent, false);
-        return new PokemonViewHolder(view);
+        return new PokemonViewHolder(view, context.getResources());
     }
 
     @Override

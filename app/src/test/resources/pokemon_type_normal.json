@@ -1,0 +1,9 @@
+{
+  "id": "16",
+  "name": "Pidgey",
+  "description": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.",
+  "image_url": "https://img.pokemondb.net/artwork/pidgey.jpg",
+  "type": "NORMAL",
+  "evolve_to": "17",
+  "color_code": "#FFC107"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "4",
+  "name": "Charmander",
+  "description": "If it's healthy, the flame on the tip of its tail will burn vigorously, even if it gets a bit wet.",
+  "image_url": "https://img.pokemondb.net/artwork/charmander.jpg",
+  "type": "FIRE",
+  "evolve_to": "5",
+  "color_code": "#F44336"
+}

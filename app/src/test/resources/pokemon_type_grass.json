@@ -1,0 +1,9 @@
+{
+  "id": "1",
+  "name": "Bulbasaur",
+  "description": "While it is young, it uses the nutrients that are stored in the seeds on its back in order to grow.",
+  "image_url": "https://img.pokemondb.net/artwork/bulbasaur.jpg",
+  "type": "GRASS",
+  "evolve_to": "2",
+  "color_code": "#4CAF50"
+}

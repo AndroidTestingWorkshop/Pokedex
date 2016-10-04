@@ -1,0 +1,9 @@
+{
+  "id": "27",
+  "name": "Sandshrew",
+  "description": "It burrows and lives underground. If threatened, it curls itself up into a ball for protection.",
+  "image_url": "https://img.pokemondb.net/artwork/sandshrew.jpg",
+  "type": "GROUND",
+  "evolve_to": "28",
+  "color_code": "#795548"
+}

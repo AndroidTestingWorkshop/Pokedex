@@ -1,0 +1,9 @@
+{
+  "id": "35",
+  "name": "Clefairy",
+  "description": "The moonlight that it stores in the wings on its back apparently gives it the ability to float in midair.",
+  "image_url": "https://img.pokemondb.net/artwork/clefairy.jpg",
+  "type": "FAIRY",
+  "evolve_to": "36",
+  "color_code": "#F06292"
+}

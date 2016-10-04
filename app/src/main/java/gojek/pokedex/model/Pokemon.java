@@ -9,18 +9,15 @@ public class Pokemon implements Parcelable {
     public static final String TAG_LIST = "gojek.pokedex.model.PokemonList";
     public static final String SELECTED_ID = "gojek.pokedex.model.Pokemon.SELECTED_ID";
     public static final String TAG = "gojek.pokedex.model.Pokemon.TAG";
-    @SerializedName("id")
+
     public String id;
-    @SerializedName("name")
     public String name;
-    @SerializedName("description")
     public String description;
     @SerializedName("image_url")
     public String imageUrl;
-    @SerializedName("type")
-    public String type;
+    public PokemonType type;
 
-    public Pokemon(String id, String name, String description, String imageUrl, String type) {
+    public Pokemon(String id, String name, String description, String imageUrl, PokemonType type) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -41,7 +38,7 @@ public class Pokemon implements Parcelable {
             return false;
         if (imageUrl != null ? !imageUrl.equals(pokemon.imageUrl) : pokemon.imageUrl != null)
             return false;
-        return type != null ? type.equals(pokemon.type) : pokemon.type == null;
+        return type == pokemon.type;
 
     }
 
@@ -66,7 +63,7 @@ public class Pokemon implements Parcelable {
         dest.writeString(this.name);
         dest.writeString(this.description);
         dest.writeString(this.imageUrl);
-        dest.writeString(this.type);
+        dest.writeInt(this.type == null ? -1 : this.type.ordinal());
     }
 
     protected Pokemon(Parcel in) {
@@ -74,10 +71,11 @@ public class Pokemon implements Parcelable {
         this.name = in.readString();
         this.description = in.readString();
         this.imageUrl = in.readString();
-        this.type = in.readString();
+        int tmpType = in.readInt();
+        this.type = tmpType == -1 ? null : PokemonType.values()[tmpType];
     }
 
-    public static final Parcelable.Creator<Pokemon> CREATOR = new Parcelable.Creator<Pokemon>() {
+    public static final Creator<Pokemon> CREATOR = new Creator<Pokemon>() {
         @Override
         public Pokemon createFromParcel(Parcel source) {
             return new Pokemon(source);

@@ -1,67 +1,63 @@
 package gojek.pokedex.model;
 
-import android.graphics.Color;
-import android.support.annotation.ColorInt;
+import android.support.annotation.ColorRes;
 
 import gojek.pokedex.R;
 
 public enum PokemonType {
     GRASS {
-        public @ColorInt int color() {
-            return resolve(R.color.type_grass);
+        public @ColorRes
+        int color() {
+            return R.color.type_grass;
         }
     },
     FIRE {
-        public @ColorInt int color() {
-            return resolve(R.color.type_fire);
+        public @ColorRes int color() {
+            return R.color.type_fire;
         }
     },
     WATER {
-        public @ColorInt int color() {
-            return resolve(R.color.type_water);
+        public @ColorRes int color() {
+            return R.color.type_water;
         }
     },
     BUG {
-        public @ColorInt int color() {
-            return resolve(R.color.type_bug);
+        public @ColorRes int color() {
+            return R.color.type_bug;
         }
     },
     NORMAL {
-        public @ColorInt int color() {
-            return resolve(R.color.type_normal);
+        public @ColorRes int color() {
+            return R.color.type_normal;
         }
     },
     POISON {
-        public @ColorInt int color() {
-            return resolve(R.color.type_poison);
+        public @ColorRes int color() {
+            return R.color.type_poison;
         }
     },
     ELECTRIC {
-        public @ColorInt int color() {
-            return resolve(R.color.type_electric);
+        public @ColorRes int color() {
+            return R.color.type_electric;
         }
     },
     GROUND {
-        public @ColorInt int color() {
-            return resolve(R.color.type_ground);
+        public @ColorRes int color() {
+            return R.color.type_ground;
         }
     },
     FAIRY {
-        public @ColorInt int color() {
-            return resolve(R.color.type_fairy);
+        public @ColorRes int color() {
+            return R.color.type_fairy;
         }
     },
     FIGHTING {
-        public @ColorInt int color() {
-            return resolve(R.color.type_fighting);
+        public @ColorRes int color() {
+            return R.color.type_fighting;
         }
     };
 
-    public @ColorInt int color() {
+    public @ColorRes int color() {
         return this.color();
-    }
-
-    private static int resolve(int colorResource) {
-        return Color.parseColor(String.valueOf(colorResource));
     }
 }

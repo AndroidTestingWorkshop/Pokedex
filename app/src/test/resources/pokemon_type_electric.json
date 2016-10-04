@@ -1,0 +1,9 @@
+{
+  "id": "25",
+  "name": "Pikachu",
+  "description": "It keeps its tail raised to monitor its surroundings. If you yank its tail, it will try to bite you.",
+  "image_url": "https://img.pokemondb.net/artwork/pikachu.jpg",
+  "type": "ELECTRIC",
+  "evolve_to": "26",
+  "color_code": "#FFEB3B"
+}

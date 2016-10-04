@@ -1,0 +1,9 @@
+{
+  "id": "56",
+  "name": "Mankey",
+  "description": "Extremely quick to anger. It could be docile one moment, then thrashing away the next instant.",
+  "image_url": "https://img.pokemondb.net/artwork/mankey.jpg",
+  "type": "FIGHTING",
+  "evolve_to": "57",
+  "color_code": "#3E2723"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "7",
+  "name": "Squirtle",
+  "description": "Shoots water at prey while in the water. Withdraws into its shell when in danger.",
+  "image_url": "https://img.pokemondb.net/artwork/squirtle.jpg",
+  "type": "WATER",
+  "evolve_to": "8",
+  "color_code": "#2196F3"
+}
