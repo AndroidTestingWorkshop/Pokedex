@@ -26,6 +26,8 @@
             android:name=".detail.PokemonDetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
+        <activity android:name=".add.AddPokemonActivity" />
+
     </application>
 
 </manifest>
