@@ -30,7 +30,7 @@ public class AddPokemonPresenterTest {
     @Test
     public void testShouldShowNameErrorIfNameIsNull() {
         List<PokemonType> pokemonTypes = new ArrayList<>();
-        pokemonTypes.add(PokemonType.ELECTRICITY);
+        pokemonTypes.add(PokemonType.ELECTRIC);
         String errorMessage = "Name should not be empty";
         presenter.addPokemonDetails(null, pokemonTypes, "some valid description");
         verify(view).showPopupError(errorMessage);

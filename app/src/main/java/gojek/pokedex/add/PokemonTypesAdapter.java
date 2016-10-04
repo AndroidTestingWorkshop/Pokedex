@@ -16,7 +16,7 @@ public class PokemonTypesAdapter extends BaseAdapter {
 
     public PokemonTypesAdapter(Context context) {
         this.context = context;
-        pokemonTypes = new PokemonType[]{PokemonType.ELECTRICITY, PokemonType.GRASS};
+        pokemonTypes = new PokemonType[]{PokemonType.GRASS, PokemonType.FIRE, PokemonType.WATER, PokemonType.BUG, PokemonType.NORMAL, PokemonType.POISON, PokemonType.ELECTRIC, PokemonType.GROUND, PokemonType.FAIRY, PokemonType.FIGHTING};
     }
 
     @Override
