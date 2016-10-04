@@ -1,16 +1,15 @@
 package gojek.pokedex.add;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.TextView;
 
 import gojek.pokedex.R;
 import gojek.pokedex.model.PokemonType;
 
-public class PokemonTypesAdapter extends BaseAdapter {
+public class PokemonTypesAdapter extends RecyclerView.Adapter<PokemonTypeHolder> {
     private final PokemonType[] pokemonTypes;
     private Context context;
 
@@ -20,13 +19,15 @@ public class PokemonTypesAdapter extends BaseAdapter {
     }
 
     @Override
-    public int getCount() {
-        return pokemonTypes.length;
+    public PokemonTypeHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.item_pokemon_type, parent, false);
+        return new PokemonTypeHolder(view, context);
     }
 
     @Override
-    public PokemonType getItem(int position) {
-        return pokemonTypes[position];
+    public void onBindViewHolder(PokemonTypeHolder holder, int position) {
+        PokemonType pokemonType = pokemonTypes[position];
+        holder.bind(pokemonType);
     }
 
     @Override
@@ -35,18 +36,7 @@ public class PokemonTypesAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View layoutItemPokemonType;
-        if (convertView == null)
-            layoutItemPokemonType = LayoutInflater.from(context).inflate(R.layout.item_pokemon_type, parent, false);
-        else
-            layoutItemPokemonType = convertView;
-
-        PokemonType pokemonType = getItem(position);
-        layoutItemPokemonType.setTag(pokemonType);
-        TextView textPokemonType = (TextView) layoutItemPokemonType.findViewById(R.id.text_pokemon_type);
-        textPokemonType.setText(pokemonType.name());
-        textPokemonType.setBackgroundColor(pokemonType.color());
-        return layoutItemPokemonType;
+    public int getItemCount() {
+        return pokemonTypes.length;
     }
 }

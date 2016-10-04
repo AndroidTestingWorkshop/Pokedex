@@ -13,4 +13,5 @@
     <color name="type_ground">#D6B65C</color>
     <color name="type_fairy">#F2ADF2</color>
     <color name="type_fighting">#7F331C</color>
+    <color name="light_gray">#f7f7f7</color>
 </resources>

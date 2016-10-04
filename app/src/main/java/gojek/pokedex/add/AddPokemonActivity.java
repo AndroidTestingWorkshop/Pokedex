@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class AddPokemonActivity extends AppCompatActivity implements AddPokemonV
     private EditText inputPokemonName;
     private EditText inputPokemonDescription;
     private Button buttonAdd;
-    private GridView gridPokemonTypes;
+    private RecyclerView listPokemonTypes;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,15 +34,9 @@ public class AddPokemonActivity extends AppCompatActivity implements AddPokemonV
         buttonAdd = (Button) findViewById(R.id.button_add_pokemon);
         inputPokemonName = (EditText) findViewById(R.id.input_pokemon_name);
         inputPokemonDescription = (EditText) findViewById(R.id.input_description);
-        gridPokemonTypes = (GridView) findViewById(R.id.grid_pokemon_types);
-        gridPokemonTypes.setAdapter(new PokemonTypesAdapter(this));
-        gridPokemonTypes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                PokemonType pokemonType = (PokemonType) view.getTag();
-                presenter.onPokemonTypeClick(pokemonType);
-            }
-        });
+        listPokemonTypes = (RecyclerView) findViewById(R.id.list_pokemon_types);
+        listPokemonTypes.setAdapter(new PokemonTypesAdapter(this));
+        listPokemonTypes.setLayoutManager(new GridLayoutManager(this, 4, GridLayoutManager.HORIZONTAL, false));
         presenter = new AddPokemonPresenter(this);
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
