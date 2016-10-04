@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="type_grass">#6EBF31</color>
+    <color name="type_electric">#FBBB18</color>
+    <color name="type_fire">#EF420F</color>
+    <color name="type_water">#3598FA</color>
+    <color name="type_bug">#9CAB18</color>
+    <color name="type_normal">#C7C2BA</color>
+    <color name="type_poison">#8F4291</color>
+    <color name="type_ground">#D6B65C</color>
+    <color name="type_fairy">#F2ADF2</color>
+    <color name="type_fighting">#7F331C</color>
 </resources>
